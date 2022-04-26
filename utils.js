@@ -37,6 +37,7 @@ function get_cookied_url_params(cookieName) {
 }
 
 function update_common_links(cookieName) {
+  let navQuoteLink = document.getElementById("navQuoteLink");
   let faqLink = document.getElementById("faqLink");
   let claimsLink = document.getElementById("claimsLink");
   let accountLink = document.getElementById("accountLink");
@@ -54,6 +55,7 @@ function update_common_links(cookieName) {
 
   let trackParams = "?" + get_cookied_url_params(cookieName);
 
+  navQuoteLink.href += trackParams;
   faqLink.href += trackParams;
   claimsLink.href += trackParams;
   accountLink.href += trackParams;
