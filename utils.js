@@ -35,3 +35,38 @@ function get_cookied_url_params(cookieName) {
   }
   return build_params(cookieVal);
 }
+
+function update_common_links(cookieName) {
+  let faqLink = document.getElementById("faqLink");
+  let claimsLink = document.getElementById("claimsLink");
+  let accountLink = document.getElementById("accountLink");
+  let paktLink = document.getElementById("paktLink");
+  let do317Link = document.getElementById("do317Link");
+
+  let legalLink = document.getElementById("legalLink");
+  let tosLink = document.getElementById("tosLink");
+  let privacyLink = document.getElementById("privacyLink");
+
+  let claimsFooter = document.getElementById("claimsFooter");
+  let homeFooter = document.getElementById("homeFooter");
+  let do317Footer = document.getElementById("do317Footer");
+  let fileClaimFooter = document.getElementById("fileClaimFooter");
+
+  let trackParams = "?" + get_cookied_url_params(cookieName);
+
+  faqLink.href += trackParams;
+  claimsLink.href += trackParams;
+  accountLink.href += trackParams;
+  paktLink.href += trackParams;
+  do317Link.href += trackParams;
+
+  legalLink.href += trackParams;
+  tosLink.href += trackParams;
+  privacyLink.href += trackParams;
+
+  claimsFooter.href += trackParams;
+  homeFooter.href += trackParams;
+  do317Footer.href += trackParams;
+  fileClaimFooter.href += trackParams;
+
+}
