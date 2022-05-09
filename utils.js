@@ -22,7 +22,7 @@ function build_params(params) {
 function get_cookied_url_params(cookieName) {
 
   let cookieVal = read_cookie(cookieName);
-  if(Object.keys(cookieVal).length == 0) {
+  if(cookieVal === undefined || Object.keys(cookieVal).length == 0) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let entries = urlParams.entries();
