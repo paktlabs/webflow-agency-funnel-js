@@ -56,9 +56,15 @@ function update_common_links(cookieName) {
   let trackParams = "?" + get_cookied_url_params(cookieName);
 
   navQuoteLink.href += trackParams;
-  faqLink.href += trackParams;
-  claimsLink.href += trackParams;
-  accountLink.href += trackParams;
+  if(faqLink) {
+    faqLink.href += trackParams;
+  }
+  if(claimsLink) {
+    claimsLink.href += trackParams;
+  }
+  if(accountLink) {
+    accountLink.href += trackParams;
+  }
   paktLink.href += trackParams;
   do317Link.href += trackParams;
 
